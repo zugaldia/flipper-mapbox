@@ -43,6 +43,9 @@ dependencies {
     debugImplementation 'com.facebook.soloader:soloader:0.8.2'
     releaseImplementation 'com.facebook.flipper:flipper-noop:0.31.2'
 
+    // Koin
+    implementation 'org.koin:koin-android:2.0.1'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

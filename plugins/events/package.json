@@ -1,0 +1,26 @@
+{
+  "name": "flipper-mapbox-events",
+  "version": "1.0.0",
+  "description": "Captures Mapbox events into Flipper.",
+  "main": "index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zugaldia/flipper-mapbox.git"
+  },
+  "keywords": [
+    "flipper",
+    "mapbox"
+  ],
+  "author": "Antonio Zugaldia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zugaldia/flipper-mapbox/issues"
+  },
+  "homepage": "https://github.com/zugaldia/flipper-mapbox/blob/master/README.md",
+  "icon": "apps",
+  "title": "Mapbox Events",
+  "category": "Mapbox Plugins",
+  "dependencies": {
+    "flipper": "latest"
+  }
+}

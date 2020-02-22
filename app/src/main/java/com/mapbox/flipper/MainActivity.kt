@@ -5,8 +5,11 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.mapbox.mapboxsdk.maps.Style
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
+
+    private val flipperPlugin: MapboxEventsFlipperPlugin by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,8 +19,12 @@ class MainActivity : AppCompatActivity() {
         mapView?.getMapAsync { mapboxMap ->
             mapboxMap.setStyle(Style.MAPBOX_STREETS) {
                 Log.d("MainActivity", "Map is ready.")
+                flipperPlugin.sendMessage("style", Style.MAPBOX_STREETS)
             }
         }
+
+        mapView?.addOnWillStartLoadingMapListener(flipperPlugin)
+        mapView?.addOnDidFinishLoadingMapListener(flipperPlugin)
     }
 
     public override fun onResume() {
